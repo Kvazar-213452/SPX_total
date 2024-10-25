@@ -1,0 +1,20 @@
+{
+  "name": "spx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "pkg": {
+    "targets": [
+      "node14-win-x64"
+    ]
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
