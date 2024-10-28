@@ -11,5 +11,5 @@ elif int(let) == 1:
     os.system("node-sass front_end/static/prefab/main.scss front_end/static/css/main.css")
     os.system("node-sass front_end/static/prefab/global.scss front_end/static/css/global.css")
 elif int(let) == 2:
-    os.system("go build -o main.exe -ldflags -H=windowsgui .")
+    os.system("go build -o main/main.exe -ldflags -H=windowsgui .")
     os.system(r"main.exe")
