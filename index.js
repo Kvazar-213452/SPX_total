@@ -6,6 +6,9 @@ const path = require('path');
 
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(mas_config['global_phat'], 'frontend/templates'));
+
 const start_server = async () => {
     let port = null;
 
@@ -16,7 +19,7 @@ const start_server = async () => {
     }
 
     app.get('/', (req, res) => {
-        res.sendFile(path.join(mas_config['global_phat'], 'frontend/templates/index.html'));
+        res.render('index');
     });
 
     app.use('/static', express.static(path.join(mas_config['global_phat'], 'frontend/static')));
@@ -27,5 +30,5 @@ const start_server = async () => {
         console.log(`Сервер запущено на порту ${port}`);
     });
 };
- 
+
 start_server();
