@@ -2,7 +2,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #ffffff;
-    background-color: #181822;
+    background-color: #1b1c1e;
 }
   
 * {
@@ -26,5 +26,37 @@ body {
     position: fixed;
     width: 100%;
     height: 100px;
-    background-color: #22222e;
+    background-color: #1f2022;
+}
+
+.img_main{
+    position: relative;
+    float: left;
+    height: 40px;
+    top: 15px;
+    left: 15px;
+}
+
+.main_button {
+    position: relative;
+    top: 13px;
+    left: 19px;
+    font-size: 20px;
+}
+
+.button_togle:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 4px;
+}
+
+.button_togle{
+    position: relative;
+    top: 13px;
+    left: 19px;
+    font-size: 15px;
+    cursor: pointer;
+    float: left;
+    color: #ffffffcc;
+    margin-right: 10px;
 }

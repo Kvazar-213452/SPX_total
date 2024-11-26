@@ -9,6 +9,10 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(mas_config['global_phat'], 'frontend/templates'));
 
+let config = {
+    start_shell: 0
+}
+
 const start_server = async () => {
     let port = null;
 
@@ -24,7 +28,9 @@ const start_server = async () => {
 
     app.use('/static', express.static(path.join(mas_config['global_phat'], 'frontend/static')));
 
-    run_shell(port);
+    if (config["start_shell"]) {
+        run_shell(port);
+    }
 
     app.listen(port, () => {
         console.log(`Сервер запущено на порту ${port}`);
