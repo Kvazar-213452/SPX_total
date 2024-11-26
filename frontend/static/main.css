@@ -1,8 +1,10 @@
 /* global */
 body {
     font-family: 'Roboto', sans-serif;
-    color: #ffffff;
+    color: #ffffffcd;
     background-color: #1b1c1e;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
   
 * {
@@ -26,37 +28,92 @@ body {
     position: fixed;
     width: 100%;
     height: 100px;
-    background-color: #1f2022;
+    z-index: 10;
 }
 
 .img_main{
     position: relative;
     float: left;
-    height: 40px;
+    height: 37px;
     top: 15px;
     left: 15px;
 }
 
-.main_button {
+.name_file {
     position: relative;
     top: 13px;
-    left: 19px;
-    font-size: 20px;
+    left: 24px;
+    font-size: 19px;
 }
 
-.button_togle:hover {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 4px;
+.page {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: calc(100% - 150px);
+    background-color: #171616;
+    width: 800px;
+    padding: 20px;
 }
 
-.button_togle{
+.page_manage {
     position: relative;
-    top: 13px;
-    left: 19px;
-    font-size: 15px;
+    top: 150px;
+    left: 15px;
+    height: 500px;
+}
+
+.page_unix {
+    position: relative;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.tools {
+    position: relative;
+    background-color: #1f2022;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    left: 20px;
+    height: 35px;
+    top: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    height: 200px;
+    background-color: #1e1f21;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 11;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.button_togle {
+    
+    position: relative;
+    font-size: 14px;
     cursor: pointer;
-    float: left;
-    color: #ffffffcc;
-    margin-right: 10px;
+    padding: 3px;
+    border-radius: 2px;
+    transition: all .3s;
+}
+
+.button_togle:hover {background-color: #24282b;}
+
+.button_div_menu {
+    position: relative;
+    top: 11px;
+    left: 20px;
 }
